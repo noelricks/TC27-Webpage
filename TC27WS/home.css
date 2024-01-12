@@ -404,6 +404,80 @@ h1{
   padding:20px;
 }
 
+h3{
+  font-family: cursive;
+  color: #fff;
+  background: transparent;
+}
+
+.bgwords {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  color: white;
+  font-size: 1em;
+  text-align: center;
+}
+
+.bgwords2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 75%);
+  color: white;
+  font-size: 2em;
+  text-align: center;
+}
+
+.bgbutton1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #fff; /* Green */
+  border: none;
+  color: red;
+  padding: 10px;
+  width: 200px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 100px;
+  transform: translate(-175%, 650%);
+}
+
+.bgbutton2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #fff; /* Green */
+  border: none;
+  color: red;
+  padding: 10px;
+  width: 200px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 100px;
+  transform: translate(-50%, 650%);
+}
+
+.bgbutton3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #fff; /* Green */
+  border: none;
+  color: red;
+  padding: 10px;
+  width: 200px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 100px;
+  transform: translate(75%, 650%);
+}
+
 .video {
   position: absolute;
   z-index: -1;
@@ -448,6 +522,7 @@ body.scroll-lock {
 
 .label {
   text-align: center;
+  flex-wrap: nowrap;
   font-size: 25px;
   color: #ff0000;
   text-shadow: 2px 2px 2px rgb(46, 107, 151);
@@ -457,18 +532,35 @@ body.scroll-lock {
 }
 
 div.homephotos {
-  margin-left: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   border: 1px solid #ccc;
-  width: 250px;
+  width: 300px;
   background-color: blue;
   transition: transform .2s;
 }
 
-
 .pics {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns as needed */
-  gap: 15px; /* Adjust the gap between images as needed */
+  grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+  grid-template-rows: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 100%; /* This ensures the image doesn't exceed its container's width */
+}
+
+@media screen and (max-width: 1150px){
+  .pics {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1050px){
+  .pics {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
 }
 
 div.homephotos:hover {
